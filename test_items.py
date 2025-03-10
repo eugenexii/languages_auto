@@ -9,6 +9,7 @@ link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
 def test_add_to_cart_btn(browser):
     browser.get(link)
+    time.sleep(30)
     try:
         addToCart_button = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".btn-add-to-basket")))
     except Exception as e:
